@@ -8,7 +8,7 @@ import pygame
 from pygame.constants import *
 import random
 
-# for my extra on this game I included the ability to fire a huge laser once every 18s
+# for my extra on this game I included the ability to fire a huge laser once every 18s by pressing x
 # this laser does not despawn on contacting aliens and has indicator in the bottom when you can fire it
 
 # this will add aliens until it reaches the count
@@ -142,7 +142,7 @@ def main():
             lasers.append([pygame.Rect(ship.x+20, ship.y, 10, 10),60,1])
             # index number 1 ( the number 60 in this case) represents how long until the laser is removed
             # Index number 2(the number 1 in this case) represents the laser type (1 = small, 2 = big)
-
+        # press the x button
         if key[K_x] and bigLaserTime <= 0:
             bigLaserTime = 1080 # can fire every 18s
             bigLaserSound.play()
